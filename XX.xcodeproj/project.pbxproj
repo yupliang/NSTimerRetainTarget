@@ -17,6 +17,7 @@
 		FDAE806424431DEA00EC8BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE806324431DEA00EC8BC5 /* main.m */; };
 		FDAE806E24431DEA00EC8BC5 /* XXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE806D24431DEA00EC8BC5 /* XXTests.m */; };
 		FDAE807924431DEA00EC8BC5 /* XXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE807824431DEA00EC8BC5 /* XXUITests.m */; };
+		FDC3D50D245FC80F009677FC /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC3D50C245FC80F009677FC /* ViewController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		FDAE807424431DEA00EC8BC5 /* XXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE807824431DEA00EC8BC5 /* XXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXUITests.m; sourceTree = "<group>"; };
 		FDAE807A24431DEA00EC8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC3D50B245FC80F009677FC /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		FDC3D50C245FC80F009677FC /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				FDAE806224431DEA00EC8BC5 /* Info.plist */,
 				FDAE806324431DEA00EC8BC5 /* main.m */,
 				FDAE805A24431DE600EC8BC5 /* XX.xcdatamodeld */,
+				FDC3D50B245FC80F009677FC /* ViewController1.h */,
+				FDC3D50C245FC80F009677FC /* ViewController1.m */,
 			);
 			path = XX;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC3D50D245FC80F009677FC /* ViewController1.m in Sources */,
 				FDAE806424431DEA00EC8BC5 /* main.m in Sources */,
 				FDAE805624431DE600EC8BC5 /* ViewController.m in Sources */,
 				FDAE805024431DE600EC8BC5 /* AppDelegate.m in Sources */,

@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ViewController1.h"
+
 
 @interface ViewController ()
+{
+    NSURLSession *_session;
+}
 
 @end
 
@@ -16,8 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //CFNETWORK_DIAGNOSTICS
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
+
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return false;
+}
+
+- (IBAction)click:(id)sender {
+    ViewController1 *vc1 = [[ViewController1 alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:vc1 animated:YES];
+}
 
 @end
+
