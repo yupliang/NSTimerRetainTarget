@@ -1,0 +1,23 @@
+{
+  "name": "YASideMenu",
+  "version": "0.0.4",
+  "summary": "A YASideMenu.",
+  "description": "YuApp01 SideMenu YuApp01 SideMenu YuApp01 SideMenu YuApp01 SideMenu",
+  "homepage": "https://github.com/yupliang/YASideMenu.git",
+  "license": "MIT",
+  "authors": {
+    "yupeiliang": "yupeiliang110@163.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/yupliang/YASideMenu.git",
+    "tag": "0.0.4"
+  },
+  "source_files": [
+    "YASideMenu",
+    "YASideMenu/YAProxy",
+    "YASideMenu/YYFPSLabel"
+  ]
+}

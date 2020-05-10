@@ -7,6 +7,12 @@
 //
 
 #import "ViewController1.h"
+#import <YYFPSLabel.h>
+#import <IGListKit.h>
+#import "UserInfoSectionController.h"
+#import "UserInfoCellModel.h"
+#import <MJExtension.h>
+#import "ContentSectionController.h"
 
 typedef void (^TimerHandler) (NSTimer *);
 
@@ -29,8 +35,11 @@ typedef void (^TimerHandler) (NSTimer *);
 
 @end
 
-@interface ViewController1 () {
+@interface ViewController1 ()<IGListAdapterDataSource> {
     NSTimer *_timer;
+    UICollectionView *_collectionView;
+    NSMutableArray<id<IGListDiffable>> *_objects;
+    IGListAdapter *_adapter;
 }
 
 @end
@@ -40,10 +49,38 @@ typedef void (^TimerHandler) (NSTimer *);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    __weak typeof (self) weakself = self;
-    _timer = [NSTimer Eoc_timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *timer) {
-        [weakself invokeTimer];
+    
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
+    if (@available(iOS 13.0, *)) {
+        _collectionView.backgroundColor = [UIColor systemGroupedBackgroundColor];
+    } else {
+        // Fallback on earlier versions
+        _collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    }
+    [self.view addSubview:_collectionView];
+    
+    _objects = [NSMutableArray new];
+    _adapter = [[IGListAdapter alloc] initWithUpdater:[IGListAdapterUpdater new] viewController:self];
+    _adapter.dataSource = self;
+    _adapter.collectionView = _collectionView;
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"data1" withExtension:@"json"];
+    NSData *data=[NSData dataWithContentsOfURL:url];
+    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    [_objects addObjectsFromArray:[UserInfoCellModel mj_objectArrayWithKeyValuesArray:arr]];
+    
+    [_adapter reloadDataWithCompletion:^(BOOL finished) {
+        NSLog(@"finished %d", finished);
     }];
+    
+    YYFPSLabel *fpsLabel = [YYFPSLabel new];
+    fpsLabel.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height-110, 60, 30);
+    [self.view addSubview:fpsLabel];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    _collectionView.frame = self.view.bounds;
 }
 
 - (void)invokeTimer {
@@ -55,4 +92,19 @@ typedef void (^TimerHandler) (NSTimer *);
     [_timer invalidate];
     NSLog(@"%s", __FUNCTION__);
 }
+- (nullable UIView *)emptyViewForListAdapter:(nonnull IGListAdapter *)listAdapter {
+    return nil;
+}
+
+- (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id)object {
+    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new]]];
+    return stack;
+}
+
+- (nonnull NSArray<id<IGListDiffable>> *)objectsForListAdapter:(nonnull IGListAdapter *)listAdapter {
+    return _objects;
+}
+
+
+
 @end

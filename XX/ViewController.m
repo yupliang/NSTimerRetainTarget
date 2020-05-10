@@ -9,29 +9,13 @@
 #import "ViewController.h"
 #import "ViewController1.h"
 
-
 @interface ViewController ()
-{
-    NSURLSession *_session;
-}
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    //CFNETWORK_DIAGNOSTICS
-}
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
-
-}
-
-- (BOOL)canBecomeFirstResponder {
-    return false;
-}
 
 - (IBAction)click:(id)sender {
     ViewController1 *vc1 = [[ViewController1 alloc] initWithNibName:nil bundle:nil];
