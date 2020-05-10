@@ -13,6 +13,7 @@
 #import "UserInfoCellModel.h"
 #import <MJExtension.h>
 #import "ContentSectionController.h"
+#import "FavorSectionController.h"
 
 typedef void (^TimerHandler) (NSTimer *);
 
@@ -76,6 +77,12 @@ typedef void (^TimerHandler) (NSTimer *);
     YYFPSLabel *fpsLabel = [YYFPSLabel new];
     fpsLabel.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height-110, 60, 30);
     [self.view addSubview:fpsLabel];
+    
+    __weak typeof (self) weakself = self;
+    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        __strong typeof(weakself) strongself = weakself;
+        NSLog(@"section count %d", strongself->_collectionView.numberOfSections);
+    }];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -97,7 +104,7 @@ typedef void (^TimerHandler) (NSTimer *);
 }
 
 - (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id)object {
-    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new]]];
+    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new], [FavorSectionController new]]];
     return stack;
 }
 

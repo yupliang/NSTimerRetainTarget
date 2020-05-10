@@ -18,6 +18,10 @@
 		FD7AB58424680F21009F8198 /* ContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB58224680F21009F8198 /* ContentCollectionViewCell.m */; };
 		FD7AB58524680F21009F8198 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7AB58324680F21009F8198 /* ContentCollectionViewCell.xib */; };
 		FD7AB5882468101F009F8198 /* ContentSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5872468101F009F8198 /* ContentSectionController.m */; };
+		FD7AB58C24684183009F8198 /* FavorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB58A24684183009F8198 /* FavorCollectionViewCell.m */; };
+		FD7AB58D24684183009F8198 /* FavorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7AB58B24684183009F8198 /* FavorCollectionViewCell.xib */; };
+		FD7AB590246842F8009F8198 /* FavorCollectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB58F246842F8009F8198 /* FavorCollectionCellModel.m */; };
+		FD7AB59324684781009F8198 /* FavorSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB59224684781009F8198 /* FavorSectionController.m */; };
 		FDAE805024431DE600EC8BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE804F24431DE600EC8BC5 /* AppDelegate.m */; };
 		FDAE805324431DE600EC8BC5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE805224431DE600EC8BC5 /* SceneDelegate.m */; };
 		FDAE805624431DE600EC8BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE805524431DE600EC8BC5 /* ViewController.m */; };
@@ -71,6 +75,13 @@
 		FD7AB58324680F21009F8198 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		FD7AB5862468101F009F8198 /* ContentSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentSectionController.h; sourceTree = "<group>"; };
 		FD7AB5872468101F009F8198 /* ContentSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentSectionController.m; sourceTree = "<group>"; };
+		FD7AB58924684183009F8198 /* FavorCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavorCollectionViewCell.h; sourceTree = "<group>"; };
+		FD7AB58A24684183009F8198 /* FavorCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavorCollectionViewCell.m; sourceTree = "<group>"; };
+		FD7AB58B24684183009F8198 /* FavorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavorCollectionViewCell.xib; sourceTree = "<group>"; };
+		FD7AB58E246842F8009F8198 /* FavorCollectionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavorCollectionCellModel.h; sourceTree = "<group>"; };
+		FD7AB58F246842F8009F8198 /* FavorCollectionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavorCollectionCellModel.m; sourceTree = "<group>"; };
+		FD7AB59124684780009F8198 /* FavorSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavorSectionController.h; sourceTree = "<group>"; };
+		FD7AB59224684781009F8198 /* FavorSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavorSectionController.m; sourceTree = "<group>"; };
 		FDAE804B24431DE600EC8BC5 /* XX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE804E24431DE600EC8BC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FDAE804F24431DE600EC8BC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +208,13 @@
 				FD7AB58324680F21009F8198 /* ContentCollectionViewCell.xib */,
 				FD7AB5862468101F009F8198 /* ContentSectionController.h */,
 				FD7AB5872468101F009F8198 /* ContentSectionController.m */,
+				FD7AB58924684183009F8198 /* FavorCollectionViewCell.h */,
+				FD7AB58A24684183009F8198 /* FavorCollectionViewCell.m */,
+				FD7AB58B24684183009F8198 /* FavorCollectionViewCell.xib */,
+				FD7AB58E246842F8009F8198 /* FavorCollectionCellModel.h */,
+				FD7AB58F246842F8009F8198 /* FavorCollectionCellModel.m */,
+				FD7AB59124684780009F8198 /* FavorSectionController.h */,
+				FD7AB59224684781009F8198 /* FavorSectionController.m */,
 			);
 			path = XX;
 			sourceTree = "<group>";
@@ -329,6 +347,7 @@
 				FDAE806124431DEA00EC8BC5 /* LaunchScreen.storyboard in Resources */,
 				FDAE805E24431DEA00EC8BC5 /* Assets.xcassets in Resources */,
 				FDAE805924431DE600EC8BC5 /* Main.storyboard in Resources */,
+				FD7AB58D24684183009F8198 /* FavorCollectionViewCell.xib in Resources */,
 				FD7AB58524680F21009F8198 /* ContentCollectionViewCell.xib in Resources */,
 				FD7AB58024680678009F8198 /* data1.json in Resources */,
 			);
@@ -425,14 +444,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC3D50D245FC80F009677FC /* ViewController1.m in Sources */,
+				FD7AB590246842F8009F8198 /* FavorCollectionCellModel.m in Sources */,
 				FD7AB57E2467EE0E009F8198 /* UserInfoCellModel.m in Sources */,
 				FDAE806424431DEA00EC8BC5 /* main.m in Sources */,
 				FD7AB5882468101F009F8198 /* ContentSectionController.m in Sources */,
 				FDAE805624431DE600EC8BC5 /* ViewController.m in Sources */,
+				FD7AB59324684781009F8198 /* FavorSectionController.m in Sources */,
 				FDAE805024431DE600EC8BC5 /* AppDelegate.m in Sources */,
 				FD7AB57A2467ECEC009F8198 /* UserInfoCell.m in Sources */,
 				FD7AB5732467EC50009F8198 /* UserInfoSectionController.m in Sources */,
 				FDAE805324431DE600EC8BC5 /* SceneDelegate.m in Sources */,
+				FD7AB58C24684183009F8198 /* FavorCollectionViewCell.m in Sources */,
 				FD7AB58424680F21009F8198 /* ContentCollectionViewCell.m in Sources */,
 				FDAE805C24431DE600EC8BC5 /* XX.xcdatamodeld in Sources */,
 			);

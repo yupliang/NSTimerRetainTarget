@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSURL *avatar;
 @property (nonatomic,copy) NSString *userName;
 @property (nonatomic,copy) NSString *content;
+@property (nonatomic,copy) NSNumber *favor;
+@property (nonatomic,assign) BOOL isFavor;
 
 @end
 
