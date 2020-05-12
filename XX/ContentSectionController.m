@@ -24,6 +24,9 @@
 }
 
 - (NSInteger)numberOfItems {
+    if (!_data.content) {
+        return 0;
+    }
     return 1;
 }
 

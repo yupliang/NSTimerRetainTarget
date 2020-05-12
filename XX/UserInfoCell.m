@@ -28,5 +28,10 @@
     self.avatarView.backgroundColor = [UIColor purpleColor];
     self.nameLabel.text = viewModel.userName;
 }
+-(IBAction)clickMore:(id)sender {
+    if (self.delegate) {
+        [self.delegate cellDidClickMore:self];
+    }
+}
 
 @end

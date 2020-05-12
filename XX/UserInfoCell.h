@@ -11,8 +11,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserInfoCell : UICollectionViewCell <IGListBindable>
+@class UserInfoCell;
+@protocol UserInfoCellDelegate <NSObject>
 
+- (void)cellDidClickMore:(UserInfoCell *)cell;
+
+@end
+
+@interface UserInfoCell : UICollectionViewCell <IGListBindable>
+@property (nonatomic,weak) id<UserInfoCellDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

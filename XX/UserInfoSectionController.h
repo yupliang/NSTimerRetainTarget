@@ -9,6 +9,7 @@
 #import "IGListSectionController.h"
 #import <IGListKit.h>
 
+extern NSString *const StackSectionDeleteNotification;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserInfoSectionController : IGListSectionController

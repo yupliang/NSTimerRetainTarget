@@ -82,10 +82,18 @@ typedef void (^TimerHandler) (NSTimer *);
     [self.view addSubview:fpsLabel];
     
     __weak typeof (self) weakself = self;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        __strong typeof(weakself) strongself = weakself;
-        NSLog(@"section count %ld", (long)strongself.collectionView.numberOfSections);
-    }];
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        __strong typeof(weakself) strongself = weakself;
+//        NSLog(@"section count %ld", (long)strongself.collectionView.numberOfSections);
+//    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteNoti:) name:StackSectionDeleteNotification object:nil];
+}
+
+- (void)deleteNoti:(NSNotification *)noti {
+    NSInteger section = [noti.object integerValue];
+    [_objects removeObjectAtIndex:section];
+    [_adapter performUpdatesAnimated:YES completion:nil];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -108,6 +116,7 @@ typedef void (^TimerHandler) (NSTimer *);
 
 - (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id)object {
     IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new], [ImageSectionController new],[FavorSectionController new]]];
+    stack.inset = UIEdgeInsetsMake(5, 0, 0, 0);
     return stack;
 }
 
