@@ -12,11 +12,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^FavorBlock) (BOOL);
+
 @interface FavorCollectionCellModel : NSObject <IGListDiffable>
 
 @property (nonatomic,assign) BOOL isFavor;
 @property (nonatomic,copy) NSString *favorNum;
 @property (nonatomic,strong,readonly) UserInfoCellModel *model;
+@property (nonatomic,copy) FavorBlock favorBlock;
 
 - (instancetype)initWithModel:(UserInfoCellModel *)model;
 

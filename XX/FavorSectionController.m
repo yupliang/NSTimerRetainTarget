@@ -36,7 +36,12 @@
 - (void)didUpdateToObject:(id)object {
     _object = object;
     self.viewModel = [[FavorCollectionCellModel alloc] initWithModel:object];
-    
+    __weak typeof(self) weakSelf = self;
+    self.viewModel.favorBlock = ^(BOOL isFavor) {
+        __strong typeof(self) strongSelf = weakSelf;
+        NSInteger favor = strongSelf.object.favor.integerValue;
+        strongSelf.object.favor = isFavor ? @(favor+1):@(favor-1);
+    };
 }
 
 @end

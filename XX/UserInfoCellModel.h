@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *content;
 @property (nonatomic,copy) NSNumber *favor;
 @property (nonatomic,assign) BOOL isFavor;
+@property (nonatomic,copy) NSArray<NSString *> *images;
 
 @end
 

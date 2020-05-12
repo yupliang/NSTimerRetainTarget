@@ -14,6 +14,7 @@
 #import <MJExtension.h>
 #import "ContentSectionController.h"
 #import "FavorSectionController.h"
+#import "ImageSectionController.h"
 
 typedef void (^TimerHandler) (NSTimer *);
 
@@ -104,7 +105,7 @@ typedef void (^TimerHandler) (NSTimer *);
 }
 
 - (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id)object {
-    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new], [FavorSectionController new]]];
+    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new], [ImageSectionController new],[FavorSectionController new]]];
     return stack;
 }
 

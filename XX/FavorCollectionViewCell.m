@@ -36,6 +36,14 @@
     self.nameLabel.text = viewModel.favorNum;
 }
 
+- (IBAction)btnDidClick:(UIButton *)sender {
+    self.favorBtn.selected = !sender.isSelected;
+    self.viewModel.isFavor = self.favorBtn.selected;
+    if (self.viewModel.favorBlock) {
+        self.viewModel.favorBlock(self.viewModel.isFavor);
+    }
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"favorNum"]) {
         NSString *favorNum = change[NSKeyValueChangeNewKey];

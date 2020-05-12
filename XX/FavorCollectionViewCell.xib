@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,19 +18,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="391" height="168"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-rH-U0G">
-                        <rect key="frame" x="10" y="10" width="16" height="18"/>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-rH-U0G">
+                        <rect key="frame" x="10" y="10" width="32" height="29"/>
                         <state key="normal" backgroundImage="praise"/>
                         <state key="selected" backgroundImage="praise_selected"/>
+                        <connections>
+                            <action selector="btnDidClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4vq-jS-oTy"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1t-Is-AT0">
-                        <rect key="frame" x="10" y="33" width="42" height="125"/>
+                        <rect key="frame" x="10" y="44" width="42" height="114"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" name="BrandColor"/>
             <constraints>
                 <constraint firstItem="wR4-rH-U0G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="RH3-FH-Zxf"/>
                 <constraint firstAttribute="bottom" secondItem="Q1t-Is-AT0" secondAttribute="bottom" constant="10" id="SY4-V0-Wk6"/>
@@ -49,5 +54,8 @@
     <resources>
         <image name="praise" width="16" height="14.5"/>
         <image name="praise_selected" width="15.5" height="14.5"/>
+        <namedColor name="BrandColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
