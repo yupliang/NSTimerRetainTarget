@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <IGListDiffable.h>
-
+#import "Comment.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserInfoCellModel : NSObject <IGListDiffable>
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSNumber *favor;
 @property (nonatomic,assign) BOOL isFavor;
 @property (nonatomic,copy) NSArray<NSString *> *images;
-
+@property (nonatomic,copy) NSArray<Comment *> *comments;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -15,6 +15,7 @@
 #import "ContentSectionController.h"
 #import "FavorSectionController.h"
 #import "ImageSectionController.h"
+#import "CommentSectionController.h"
 
 typedef void (^TimerHandler) (NSTimer *);
 
@@ -115,7 +116,7 @@ typedef void (^TimerHandler) (NSTimer *);
 }
 
 - (nonnull IGListSectionController *)listAdapter:(nonnull IGListAdapter *)listAdapter sectionControllerForObject:(nonnull id)object {
-    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new], [ImageSectionController new],[FavorSectionController new]]];
+    IGListStackedSectionController *stack = [[IGListStackedSectionController alloc] initWithSectionControllers:@[[UserInfoSectionController new], [ContentSectionController new], [ImageSectionController new],[FavorSectionController new], [CommentSectionController new]]];
     stack.inset = UIEdgeInsetsMake(5, 0, 0, 0);
     return stack;
 }

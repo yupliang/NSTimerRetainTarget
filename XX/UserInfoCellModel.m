@@ -7,8 +7,13 @@
 //
 
 #import "UserInfoCellModel.h"
+#import <MJExtension.h>
 
 @implementation UserInfoCellModel
+
++ (NSDictionary *)mj_objectClassInArray {
+    return @{@"comments":[Comment class]};
+}
 
 - (nonnull id<NSObject>)diffIdentifier {
     return self.feedId;

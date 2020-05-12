@@ -29,6 +29,11 @@
 		FD7AB5A02469992D009F8198 /* ImagesCollectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB59F2469992D009F8198 /* ImagesCollectionCellModel.m */; };
 		FD7AB5A324699B17009F8198 /* NSArray+FP.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5A224699B17009F8198 /* NSArray+FP.m */; };
 		FD7AB5A6246A2A38009F8198 /* ImageSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5A5246A2A38009F8198 /* ImageSectionController.m */; };
+		FD7AB5AD246AE6CF009F8198 /* CommentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5AB246AE6CF009F8198 /* CommentCollectionViewCell.m */; };
+		FD7AB5AE246AE6CF009F8198 /* CommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7AB5AC246AE6CF009F8198 /* CommentCollectionViewCell.xib */; };
+		FD7AB5B1246AE80D009F8198 /* CommentCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5B0246AE80D009F8198 /* CommentCellModel.m */; };
+		FD7AB5B4246AE8A7009F8198 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5B3246AE8A7009F8198 /* Comment.m */; };
+		FD7AB5B7246AEACB009F8198 /* CommentSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB5B6246AEACB009F8198 /* CommentSectionController.m */; };
 		FDAE805024431DE600EC8BC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE804F24431DE600EC8BC5 /* AppDelegate.m */; };
 		FDAE805324431DE600EC8BC5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE805224431DE600EC8BC5 /* SceneDelegate.m */; };
 		FDAE805624431DE600EC8BC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE805524431DE600EC8BC5 /* ViewController.m */; };
@@ -103,6 +108,15 @@
 		FD7AB5A5246A2A38009F8198 /* ImageSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageSectionController.m; sourceTree = "<group>"; };
 		FD7AB5A7246A2D78009F8198 /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		FD7AB5A8246A2D78009F8198 /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		FD7AB5AA246AE6CF009F8198 /* CommentCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCollectionViewCell.h; sourceTree = "<group>"; };
+		FD7AB5AB246AE6CF009F8198 /* CommentCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentCollectionViewCell.m; sourceTree = "<group>"; };
+		FD7AB5AC246AE6CF009F8198 /* CommentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCollectionViewCell.xib; sourceTree = "<group>"; };
+		FD7AB5AF246AE80D009F8198 /* CommentCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCellModel.h; sourceTree = "<group>"; };
+		FD7AB5B0246AE80D009F8198 /* CommentCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentCellModel.m; sourceTree = "<group>"; };
+		FD7AB5B2246AE8A7009F8198 /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		FD7AB5B3246AE8A7009F8198 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		FD7AB5B5246AEACB009F8198 /* CommentSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentSectionController.h; sourceTree = "<group>"; };
+		FD7AB5B6246AEACB009F8198 /* CommentSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentSectionController.m; sourceTree = "<group>"; };
 		FDAE804B24431DE600EC8BC5 /* XX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE804E24431DE600EC8BC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FDAE804F24431DE600EC8BC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -250,6 +264,15 @@
 				FD7AB5A5246A2A38009F8198 /* ImageSectionController.m */,
 				FD7AB5A7246A2D78009F8198 /* Todo.h */,
 				FD7AB5A8246A2D78009F8198 /* Todo.m */,
+				FD7AB5AA246AE6CF009F8198 /* CommentCollectionViewCell.h */,
+				FD7AB5AB246AE6CF009F8198 /* CommentCollectionViewCell.m */,
+				FD7AB5AC246AE6CF009F8198 /* CommentCollectionViewCell.xib */,
+				FD7AB5AF246AE80D009F8198 /* CommentCellModel.h */,
+				FD7AB5B0246AE80D009F8198 /* CommentCellModel.m */,
+				FD7AB5B2246AE8A7009F8198 /* Comment.h */,
+				FD7AB5B3246AE8A7009F8198 /* Comment.m */,
+				FD7AB5B5246AEACB009F8198 /* CommentSectionController.h */,
+				FD7AB5B6246AEACB009F8198 /* CommentSectionController.m */,
 			);
 			path = XX;
 			sourceTree = "<group>";
@@ -380,6 +403,7 @@
 			files = (
 				FD7AB57B2467ECEC009F8198 /* UserInfoCell.xib in Resources */,
 				FDAE806124431DEA00EC8BC5 /* LaunchScreen.storyboard in Resources */,
+				FD7AB5AE246AE6CF009F8198 /* CommentCollectionViewCell.xib in Resources */,
 				FD7AB59824699747009F8198 /* ImagesCollectionViewCell.xib in Resources */,
 				FDAE805E24431DEA00EC8BC5 /* Assets.xcassets in Resources */,
 				FDAE805924431DE600EC8BC5 /* Main.storyboard in Resources */,
@@ -480,20 +504,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7AB5B1246AE80D009F8198 /* CommentCellModel.m in Sources */,
 				FDC3D50D245FC80F009677FC /* ViewController1.m in Sources */,
 				FD7AB590246842F8009F8198 /* FavorCollectionCellModel.m in Sources */,
+				FD7AB5B4246AE8A7009F8198 /* Comment.m in Sources */,
 				FD7AB57E2467EE0E009F8198 /* UserInfoCellModel.m in Sources */,
 				FDAE806424431DEA00EC8BC5 /* main.m in Sources */,
 				FD7AB5882468101F009F8198 /* ContentSectionController.m in Sources */,
 				FDAE805624431DE600EC8BC5 /* ViewController.m in Sources */,
 				FD7AB59324684781009F8198 /* FavorSectionController.m in Sources */,
 				FD7AB5A6246A2A38009F8198 /* ImageSectionController.m in Sources */,
+				FD7AB5AD246AE6CF009F8198 /* CommentCollectionViewCell.m in Sources */,
 				FDAE805024431DE600EC8BC5 /* AppDelegate.m in Sources */,
 				FD7AB5A324699B17009F8198 /* NSArray+FP.m in Sources */,
 				FD7AB57A2467ECEC009F8198 /* UserInfoCell.m in Sources */,
 				FD7AB5A02469992D009F8198 /* ImagesCollectionCellModel.m in Sources */,
 				FD7AB59C24699852009F8198 /* ImageCell.m in Sources */,
 				FD7AB5732467EC50009F8198 /* UserInfoSectionController.m in Sources */,
+				FD7AB5B7246AEACB009F8198 /* CommentSectionController.m in Sources */,
 				FDAE805324431DE600EC8BC5 /* SceneDelegate.m in Sources */,
 				FD7AB58C24684183009F8198 /* FavorCollectionViewCell.m in Sources */,
 				FD7AB59724699747009F8198 /* ImagesCollectionViewCell.m in Sources */,

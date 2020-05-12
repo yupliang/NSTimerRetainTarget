@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CommentCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="387" height="168"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEC-O8-JWH">
+                        <rect key="frame" x="10" y="73.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-mP-ld3">
+                        <rect key="frame" x="337" y="69" width="30" height="30"/>
+                        <state key="normal" title="❌"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-BG-eTA">
+                        <rect key="frame" x="57" y="73.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="mEC-O8-JWH" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="8oJ-Bd-oSC"/>
+                <constraint firstAttribute="trailing" secondItem="DNI-mP-ld3" secondAttribute="trailing" constant="20" id="InX-N1-Rcs"/>
+                <constraint firstItem="DNI-mP-ld3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="WaB-u7-fEQ"/>
+                <constraint firstItem="ZT7-BG-eTA" firstAttribute="leading" secondItem="mEC-O8-JWH" secondAttribute="trailing" constant="5" id="lX2-lG-q4z"/>
+                <constraint firstItem="ZT7-BG-eTA" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="sZK-oL-311"/>
+                <constraint firstItem="mEC-O8-JWH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="wMf-Qu-K05"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="387" height="168"/>
+            <connections>
+                <outlet property="leftLabel" destination="mEC-O8-JWH" id="oUx-TA-wFY"/>
+                <outlet property="rightLabel" destination="ZT7-BG-eTA" id="goi-fX-JJK"/>
+            </connections>
+            <point key="canvasLocation" x="-5.0724637681159424" y="97.098214285714278"/>
+        </collectionViewCell>
+    </objects>
+</document>
