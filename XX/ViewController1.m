@@ -44,6 +44,8 @@ typedef void (^TimerHandler) (NSTimer *);
     IGListAdapter *_adapter;
 }
 
+@property (nonatomic,strong) UICollectionView *collectionView;
+
 @end
 
 @implementation ViewController1
@@ -80,9 +82,9 @@ typedef void (^TimerHandler) (NSTimer *);
     [self.view addSubview:fpsLabel];
     
     __weak typeof (self) weakself = self;
-    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
         __strong typeof(weakself) strongself = weakself;
-        NSLog(@"section count %d", strongself->_collectionView.numberOfSections);
+        NSLog(@"section count %ld", (long)strongself.collectionView.numberOfSections);
     }];
 }
 

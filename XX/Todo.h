@@ -7,5 +7,5 @@
 //
 
 //MAKR: TODO
-1 V1 返回崩溃 BAD_ACCESS
+1 V1 返回崩溃 BAD_ACCESS [done]
 2 图片不显示
