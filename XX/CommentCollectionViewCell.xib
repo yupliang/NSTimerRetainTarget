@@ -26,6 +26,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-mP-ld3">
                         <rect key="frame" x="337" y="69" width="30" height="30"/>
                         <state key="normal" title="❌"/>
+                        <connections>
+                            <action selector="onClickDelete:" destination="gTV-IL-0wX" eventType="touchUpInside" id="v9o-Wc-hMc"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-BG-eTA">
                         <rect key="frame" x="57" y="73.5" width="42" height="21"/>

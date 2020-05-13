@@ -8,6 +8,8 @@
 
 #import "CommentCollectionViewCell.h"
 #import "CommentCellModel.h"
+
+
 @interface CommentCollectionViewCell ()
 @property (nonatomic,weak) IBOutlet UILabel *leftLabel;
 @property (nonatomic,weak) IBOutlet UILabel *rightLabel;
@@ -23,5 +25,11 @@
 - (void)bindViewModel:(CommentCellModel *)viewModel {
     self.leftLabel.text = viewModel.person;
     self.rightLabel.text = viewModel.comment;
+}
+
+- (IBAction)onClickDelete:(id)sender {
+    if (self.deleteAction) {
+        self.deleteAction(self);
+    }
 }
 @end

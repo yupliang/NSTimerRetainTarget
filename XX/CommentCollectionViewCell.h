@@ -10,9 +10,10 @@
 #import <IGListBindable.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class CommentCollectionViewCell;
+typedef void (^DeleteAction)(CommentCollectionViewCell *);
 @interface CommentCollectionViewCell : UICollectionViewCell <IGListBindable>
-
+@property (nonatomic,copy) DeleteAction deleteAction;
 @end
 
 NS_ASSUME_NONNULL_END
